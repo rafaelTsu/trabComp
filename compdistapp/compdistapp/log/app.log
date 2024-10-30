@@ -1,0 +1,180 @@
+2024-08-29 09:26:05,547 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.200:8080
+2024-08-29 09:26:05,547 - [33mPress CTRL+C to quit[0m
+2024-08-29 09:26:05,547 -  * Restarting with stat
+2024-08-29 09:26:05,977 -  * Debugger is active!
+2024-08-29 09:26:05,987 -  * Debugger PIN: 391-249-703
+2024-08-29 09:26:09,119 - 127.0.0.1 - - [29/Aug/2024 09:26:09] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2024-08-29 09:26:11,760 - Usu√°rio brivaldo, acessou o index.
+2024-08-29 09:26:11,760 - 127.0.0.1 - - [29/Aug/2024 09:26:11] "GET / HTTP/1.1" 200 -
+2024-08-29 09:26:11,944 - 127.0.0.1 - - [29/Aug/2024 09:26:11] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-08-29 09:26:15,273 - 127.0.0.1 - - [29/Aug/2024 09:26:15] "GET /admin/ HTTP/1.1" 200 -
+2024-08-29 09:26:15,364 - 127.0.0.1 - - [29/Aug/2024 09:26:15] "GET /admin/static/bootstrap/bootstrap4/swatch/yeti/bootstrap.min.css?v=4.2.1 HTTP/1.1" 200 -
+2024-08-29 09:26:15,367 - 127.0.0.1 - - [29/Aug/2024 09:26:15] "GET /admin/static/bootstrap/bootstrap4/css/font-awesome.min.css?v=4.7.0 HTTP/1.1" 200 -
+2024-08-29 09:26:15,369 - 127.0.0.1 - - [29/Aug/2024 09:26:15] "GET /admin/static/admin/css/bootstrap4/admin.css?v=1.1.1 HTTP/1.1" 200 -
+2024-08-29 09:26:15,374 - 127.0.0.1 - - [29/Aug/2024 09:26:15] "GET /admin/static/bootstrap/bootstrap4/js/popper.min.js HTTP/1.1" 200 -
+2024-08-29 09:26:15,376 - 127.0.0.1 - - [29/Aug/2024 09:26:15] "GET /admin/static/vendor/jquery.min.js?v=3.5.1 HTTP/1.1" 200 -
+2024-08-29 09:26:15,376 - 127.0.0.1 - - [29/Aug/2024 09:26:15] "GET /admin/static/bootstrap/bootstrap4/js/bootstrap.min.js?v=4.2.1 HTTP/1.1" 200 -
+2024-08-29 09:26:15,377 - 127.0.0.1 - - [29/Aug/2024 09:26:15] "GET /admin/static/vendor/moment.min.js?v=2.9.0 HTTP/1.1" 200 -
+2024-08-29 09:26:15,379 - 127.0.0.1 - - [29/Aug/2024 09:26:15] "GET /admin/static/vendor/bootstrap4/util.js?v=4.3.1 HTTP/1.1" 200 -
+2024-08-29 09:26:15,382 - 127.0.0.1 - - [29/Aug/2024 09:26:15] "GET /admin/static/vendor/select2/select2.min.js?v=4.2.1 HTTP/1.1" 200 -
+2024-08-29 09:26:15,385 - 127.0.0.1 - - [29/Aug/2024 09:26:15] "GET /admin/static/vendor/bootstrap4/dropdown.js?v=4.3.1 HTTP/1.1" 200 -
+2024-08-29 09:26:15,388 - 127.0.0.1 - - [29/Aug/2024 09:26:15] "GET /admin/static/vendor/multi-level-dropdowns-bootstrap/bootstrap4-dropdown-ml-hack.js HTTP/1.1" 200 -
+2024-08-29 09:26:15,390 - 127.0.0.1 - - [29/Aug/2024 09:26:15] "GET /admin/static/admin/js/helpers.js?v=1.0.0 HTTP/1.1" 200 -
+2024-08-29 09:26:16,156 - 127.0.0.1 - - [29/Aug/2024 09:26:16] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-08-29 09:26:17,851 - 127.0.0.1 - - [29/Aug/2024 09:26:17] "GET /admin/profile/ HTTP/1.1" 200 -
+2024-08-29 09:26:17,958 - 127.0.0.1 - - [29/Aug/2024 09:26:17] "GET /admin/static/vendor/select2/select2.css?v=4.2.1 HTTP/1.1" 200 -
+2024-08-29 09:26:17,958 - 127.0.0.1 - - [29/Aug/2024 09:26:17] "[36mGET /admin/static/vendor/jquery.min.js?v=3.5.1 HTTP/1.1[0m" 304 -
+2024-08-29 09:26:17,958 - 127.0.0.1 - - [29/Aug/2024 09:26:17] "GET /admin/static/vendor/select2/select2-bootstrap4.css?v=1.4.6 HTTP/1.1" 200 -
+2024-08-29 09:26:17,965 - 127.0.0.1 - - [29/Aug/2024 09:26:17] "[36mGET /admin/static/bootstrap/bootstrap4/js/bootstrap.min.js?v=4.2.1 HTTP/1.1[0m" 304 -
+2024-08-29 09:26:17,966 - 127.0.0.1 - - [29/Aug/2024 09:26:17] "[36mGET /admin/static/bootstrap/bootstrap4/js/popper.min.js HTTP/1.1[0m" 304 -
+2024-08-29 09:26:17,969 - 127.0.0.1 - - [29/Aug/2024 09:26:17] "GET /admin/static/vendor/bootstrap-daterangepicker/daterangepicker-bs4.css?v=1.3.22 HTTP/1.1" 200 -
+2024-08-29 09:26:17,971 - 127.0.0.1 - - [29/Aug/2024 09:26:17] "[36mGET /admin/static/vendor/bootstrap4/util.js?v=4.3.1 HTTP/1.1[0m" 304 -
+2024-08-29 09:26:17,971 - 127.0.0.1 - - [29/Aug/2024 09:26:17] "[36mGET /admin/static/vendor/moment.min.js?v=2.9.0 HTTP/1.1[0m" 304 -
+2024-08-29 09:26:17,975 - 127.0.0.1 - - [29/Aug/2024 09:26:17] "[36mGET /admin/static/vendor/bootstrap4/dropdown.js?v=4.3.1 HTTP/1.1[0m" 304 -
+2024-08-29 09:26:17,977 - 127.0.0.1 - - [29/Aug/2024 09:26:17] "[36mGET /admin/static/vendor/select2/select2.min.js?v=4.2.1 HTTP/1.1[0m" 304 -
+2024-08-29 09:26:17,977 - 127.0.0.1 - - [29/Aug/2024 09:26:17] "[36mGET /admin/static/vendor/multi-level-dropdowns-bootstrap/bootstrap4-dropdown-ml-hack.js HTTP/1.1[0m" 304 -
+2024-08-29 09:26:17,984 - 127.0.0.1 - - [29/Aug/2024 09:26:17] "GET /admin/static/admin/js/form.js?v=1.0.1 HTTP/1.1" 200 -
+2024-08-29 09:26:17,985 - 127.0.0.1 - - [29/Aug/2024 09:26:17] "[36mGET /admin/static/admin/js/helpers.js?v=1.0.0 HTTP/1.1[0m" 304 -
+2024-08-29 09:26:17,985 - 127.0.0.1 - - [29/Aug/2024 09:26:17] "GET /admin/static/vendor/bootstrap-daterangepicker/daterangepicker.js?v=1.3.22 HTTP/1.1" 200 -
+2024-08-29 09:26:17,987 - 127.0.0.1 - - [29/Aug/2024 09:26:17] "GET /admin/static/admin/js/bs4_modal.js?v=1.0.0 HTTP/1.1" 200 -
+2024-08-29 09:26:17,990 - 127.0.0.1 - - [29/Aug/2024 09:26:17] "GET /admin/static/admin/js/actions.js?v=1.0.0 HTTP/1.1" 200 -
+2024-08-29 09:26:17,993 - 127.0.0.1 - - [29/Aug/2024 09:26:17] "GET /admin/static/admin/js/bs4_filters.js?v=1.0.0 HTTP/1.1" 200 -
+2024-08-29 09:26:17,996 - 127.0.0.1 - - [29/Aug/2024 09:26:17] "[36mGET /admin/static/bootstrap/bootstrap4/swatch/yeti/bootstrap.min.css?v=4.2.1 HTTP/1.1[0m" 304 -
+2024-08-29 09:26:17,998 - 127.0.0.1 - - [29/Aug/2024 09:26:17] "[36mGET /admin/static/bootstrap/bootstrap4/css/font-awesome.min.css?v=4.7.0 HTTP/1.1[0m" 304 -
+2024-08-29 09:26:17,998 - 127.0.0.1 - - [29/Aug/2024 09:26:17] "[36mGET /admin/static/admin/css/bootstrap4/admin.css?v=1.1.1 HTTP/1.1[0m" 304 -
+2024-08-29 09:26:18,072 - 127.0.0.1 - - [29/Aug/2024 09:26:18] "GET /admin/static/bootstrap/bootstrap4/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 -
+2024-08-29 09:26:21,797 - 127.0.0.1 - - [29/Aug/2024 09:26:21] "GET /admin/ HTTP/1.1" 200 -
+2024-08-29 09:26:21,880 - 127.0.0.1 - - [29/Aug/2024 09:26:21] "[36mGET /admin/static/bootstrap/bootstrap4/swatch/yeti/bootstrap.min.css?v=4.2.1 HTTP/1.1[0m" 304 -
+2024-08-29 09:26:21,883 - 127.0.0.1 - - [29/Aug/2024 09:26:21] "[36mGET /admin/static/admin/css/bootstrap4/admin.css?v=1.1.1 HTTP/1.1[0m" 304 -
+2024-08-29 09:26:21,883 - 127.0.0.1 - - [29/Aug/2024 09:26:21] "[36mGET /admin/static/bootstrap/bootstrap4/js/popper.min.js HTTP/1.1[0m" 304 -
+2024-08-29 09:26:21,885 - 127.0.0.1 - - [29/Aug/2024 09:26:21] "[36mGET /admin/static/vendor/jquery.min.js?v=3.5.1 HTTP/1.1[0m" 304 -
+2024-08-29 09:26:21,890 - 127.0.0.1 - - [29/Aug/2024 09:26:21] "[36mGET /admin/static/bootstrap/bootstrap4/css/font-awesome.min.css?v=4.7.0 HTTP/1.1[0m" 304 -
+2024-08-29 09:26:21,890 - 127.0.0.1 - - [29/Aug/2024 09:26:21] "[36mGET /admin/static/bootstrap/bootstrap4/js/bootstrap.min.js?v=4.2.1 HTTP/1.1[0m" 304 -
+2024-08-29 09:26:21,892 - 127.0.0.1 - - [29/Aug/2024 09:26:21] "[36mGET /admin/static/vendor/moment.min.js?v=2.9.0 HTTP/1.1[0m" 304 -
+2024-08-29 09:26:21,901 - 127.0.0.1 - - [29/Aug/2024 09:26:21] "[36mGET /admin/static/vendor/bootstrap4/util.js?v=4.3.1 HTTP/1.1[0m" 304 -
+2024-08-29 09:26:21,903 - 127.0.0.1 - - [29/Aug/2024 09:26:21] "[36mGET /admin/static/vendor/bootstrap4/dropdown.js?v=4.3.1 HTTP/1.1[0m" 304 -
+2024-08-29 09:26:21,905 - 127.0.0.1 - - [29/Aug/2024 09:26:21] "[36mGET /admin/static/vendor/select2/select2.min.js?v=4.2.1 HTTP/1.1[0m" 304 -
+2024-08-29 09:26:21,907 - 127.0.0.1 - - [29/Aug/2024 09:26:21] "[36mGET /admin/static/admin/js/helpers.js?v=1.0.0 HTTP/1.1[0m" 304 -
+2024-08-29 09:26:21,908 - 127.0.0.1 - - [29/Aug/2024 09:26:21] "[36mGET /admin/static/vendor/multi-level-dropdowns-bootstrap/bootstrap4-dropdown-ml-hack.js HTTP/1.1[0m" 304 -
+2024-08-29 09:26:22,678 - 127.0.0.1 - - [29/Aug/2024 09:26:22] "GET /admin/profile/ HTTP/1.1" 200 -
+2024-08-29 09:26:22,802 - 127.0.0.1 - - [29/Aug/2024 09:26:22] "[36mGET /admin/static/bootstrap/bootstrap4/swatch/yeti/bootstrap.min.css?v=4.2.1 HTTP/1.1[0m" 304 -
+2024-08-29 09:26:22,803 - 127.0.0.1 - - [29/Aug/2024 09:26:22] "[36mGET /admin/static/bootstrap/bootstrap4/css/font-awesome.min.css?v=4.7.0 HTTP/1.1[0m" 304 -
+2024-08-29 09:26:22,803 - 127.0.0.1 - - [29/Aug/2024 09:26:22] "[36mGET /admin/static/admin/css/bootstrap4/admin.css?v=1.1.1 HTTP/1.1[0m" 304 -
+2024-08-29 09:26:22,806 - 127.0.0.1 - - [29/Aug/2024 09:26:22] "[36mGET /admin/static/vendor/select2/select2.css?v=4.2.1 HTTP/1.1[0m" 304 -
+2024-08-29 09:26:22,810 - 127.0.0.1 - - [29/Aug/2024 09:26:22] "[36mGET /admin/static/vendor/select2/select2-bootstrap4.css?v=1.4.6 HTTP/1.1[0m" 304 -
+2024-08-29 09:26:22,810 - 127.0.0.1 - - [29/Aug/2024 09:26:22] "[36mGET /admin/static/vendor/jquery.min.js?v=3.5.1 HTTP/1.1[0m" 304 -
+2024-08-29 09:26:22,811 - 127.0.0.1 - - [29/Aug/2024 09:26:22] "[36mGET /admin/static/vendor/bootstrap-daterangepicker/daterangepicker-bs4.css?v=1.3.22 HTTP/1.1[0m" 304 -
+2024-08-29 09:26:22,813 - 127.0.0.1 - - [29/Aug/2024 09:26:22] "[36mGET /admin/static/bootstrap/bootstrap4/js/popper.min.js HTTP/1.1[0m" 304 -
+2024-08-29 09:26:22,818 - 127.0.0.1 - - [29/Aug/2024 09:26:22] "[36mGET /admin/static/bootstrap/bootstrap4/js/bootstrap.min.js?v=4.2.1 HTTP/1.1[0m" 304 -
+2024-08-29 09:26:22,820 - 127.0.0.1 - - [29/Aug/2024 09:26:22] "[36mGET /admin/static/vendor/moment.min.js?v=2.9.0 HTTP/1.1[0m" 304 -
+2024-08-29 09:26:22,823 - 127.0.0.1 - - [29/Aug/2024 09:26:22] "[36mGET /admin/static/vendor/bootstrap4/util.js?v=4.3.1 HTTP/1.1[0m" 304 -
+2024-08-29 09:26:22,831 - 127.0.0.1 - - [29/Aug/2024 09:26:22] "[36mGET /admin/static/vendor/bootstrap4/dropdown.js?v=4.3.1 HTTP/1.1[0m" 304 -
+2024-08-29 09:26:22,832 - 127.0.0.1 - - [29/Aug/2024 09:26:22] "[36mGET /admin/static/vendor/select2/select2.min.js?v=4.2.1 HTTP/1.1[0m" 304 -
+2024-08-29 09:26:22,832 - 127.0.0.1 - - [29/Aug/2024 09:26:22] "[36mGET /admin/static/admin/js/helpers.js?v=1.0.0 HTTP/1.1[0m" 304 -
+2024-08-29 09:26:22,832 - 127.0.0.1 - - [29/Aug/2024 09:26:22] "[36mGET /admin/static/vendor/bootstrap-daterangepicker/daterangepicker.js?v=1.3.22 HTTP/1.1[0m" 304 -
+2024-08-29 09:26:22,833 - 127.0.0.1 - - [29/Aug/2024 09:26:22] "[36mGET /admin/static/vendor/multi-level-dropdowns-bootstrap/bootstrap4-dropdown-ml-hack.js HTTP/1.1[0m" 304 -
+2024-08-29 09:26:22,835 - 127.0.0.1 - - [29/Aug/2024 09:26:22] "[36mGET /admin/static/admin/js/form.js?v=1.0.1 HTTP/1.1[0m" 304 -
+2024-08-29 09:26:22,836 - 127.0.0.1 - - [29/Aug/2024 09:26:22] "[36mGET /admin/static/admin/js/bs4_modal.js?v=1.0.0 HTTP/1.1[0m" 304 -
+2024-08-29 09:26:22,838 - 127.0.0.1 - - [29/Aug/2024 09:26:22] "[36mGET /admin/static/admin/js/bs4_filters.js?v=1.0.0 HTTP/1.1[0m" 304 -
+2024-08-29 09:26:22,840 - 127.0.0.1 - - [29/Aug/2024 09:26:22] "[36mGET /admin/static/admin/js/actions.js?v=1.0.0 HTTP/1.1[0m" 304 -
+2024-08-29 09:26:26,060 - 127.0.0.1 - - [29/Aug/2024 09:26:26] "[32mGET /admin HTTP/1.1[0m" 308 -
+2024-08-29 09:26:26,074 - 127.0.0.1 - - [29/Aug/2024 09:26:26] "GET /admin/ HTTP/1.1" 200 -
+2024-08-29 09:26:26,159 - 127.0.0.1 - - [29/Aug/2024 09:26:26] "[36mGET /admin/static/bootstrap/bootstrap4/swatch/yeti/bootstrap.min.css?v=4.2.1 HTTP/1.1[0m" 304 -
+2024-08-29 09:26:26,161 - 127.0.0.1 - - [29/Aug/2024 09:26:26] "[36mGET /admin/static/vendor/jquery.min.js?v=3.5.1 HTTP/1.1[0m" 304 -
+2024-08-29 09:26:26,162 - 127.0.0.1 - - [29/Aug/2024 09:26:26] "[36mGET /admin/static/admin/css/bootstrap4/admin.css?v=1.1.1 HTTP/1.1[0m" 304 -
+2024-08-29 09:26:26,166 - 127.0.0.1 - - [29/Aug/2024 09:26:26] "[36mGET /admin/static/bootstrap/bootstrap4/js/bootstrap.min.js?v=4.2.1 HTTP/1.1[0m" 304 -
+2024-08-29 09:26:26,167 - 127.0.0.1 - - [29/Aug/2024 09:26:26] "[36mGET /admin/static/bootstrap/bootstrap4/css/font-awesome.min.css?v=4.7.0 HTTP/1.1[0m" 304 -
+2024-08-29 09:26:26,171 - 127.0.0.1 - - [29/Aug/2024 09:26:26] "[36mGET /admin/static/bootstrap/bootstrap4/js/popper.min.js HTTP/1.1[0m" 304 -
+2024-08-29 09:26:26,171 - 127.0.0.1 - - [29/Aug/2024 09:26:26] "[36mGET /admin/static/vendor/moment.min.js?v=2.9.0 HTTP/1.1[0m" 304 -
+2024-08-29 09:26:26,173 - 127.0.0.1 - - [29/Aug/2024 09:26:26] "[36mGET /admin/static/vendor/bootstrap4/util.js?v=4.3.1 HTTP/1.1[0m" 304 -
+2024-08-29 09:26:26,176 - 127.0.0.1 - - [29/Aug/2024 09:26:26] "[36mGET /admin/static/vendor/select2/select2.min.js?v=4.2.1 HTTP/1.1[0m" 304 -
+2024-08-29 09:26:26,183 - 127.0.0.1 - - [29/Aug/2024 09:26:26] "[36mGET /admin/static/vendor/bootstrap4/dropdown.js?v=4.3.1 HTTP/1.1[0m" 304 -
+2024-08-29 09:26:26,184 - 127.0.0.1 - - [29/Aug/2024 09:26:26] "[36mGET /admin/static/vendor/multi-level-dropdowns-bootstrap/bootstrap4-dropdown-ml-hack.js HTTP/1.1[0m" 304 -
+2024-08-29 09:26:26,192 - 127.0.0.1 - - [29/Aug/2024 09:26:26] "[36mGET /admin/static/admin/js/helpers.js?v=1.0.0 HTTP/1.1[0m" 304 -
+2024-10-29 20:12:56,987 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.6.141.99:8080
+2024-10-29 20:12:56,987 - [33mPress CTRL+C to quit[0m
+2024-10-29 20:12:56,989 -  * Restarting with stat
+2024-10-29 20:12:58,042 -  * Debugger is active!
+2024-10-29 20:12:58,043 -  * Debugger PIN: 667-367-216
+2024-10-29 20:13:07,832 - 127.0.0.1 - - [29/Oct/2024 20:13:07] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2024-10-29 20:13:08,114 - 127.0.0.1 - - [29/Oct/2024 20:13:08] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2024-10-29 20:13:08,200 - 127.0.0.1 - - [29/Oct/2024 20:13:08] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2024-10-29 20:13:08,298 - 127.0.0.1 - - [29/Oct/2024 20:13:08] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=gFty3Uk8NzkGxXMVv6PD HTTP/1.1" 200 -
+2024-10-29 20:13:08,620 - 127.0.0.1 - - [29/Oct/2024 20:13:08] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2024-10-29 20:20:59,449 -  * Detected change in 'C:\\Users\\mzmag\\Downloads\\compdistapp\\compdistapp\\app.py', reloading
+2024-10-29 20:20:59,604 -  * Restarting with stat
+2024-10-29 20:22:43,649 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.6.141.99:8080
+2024-10-29 20:22:43,650 - [33mPress CTRL+C to quit[0m
+2024-10-29 20:22:43,652 -  * Restarting with stat
+2024-10-29 20:22:44,663 -  * Debugger is active!
+2024-10-29 20:22:44,665 -  * Debugger PIN: 667-367-216
+2024-10-29 20:22:48,045 - Usu·rio brivaldo, acessou o index.
+2024-10-29 20:22:48,046 - 127.0.0.1 - - [29/Oct/2024 20:22:48] "GET / HTTP/1.1" 200 -
+2024-10-29 20:22:52,288 - Usu·rio brivaldo, acessou o index.
+2024-10-29 20:22:52,289 - 127.0.0.1 - - [29/Oct/2024 20:22:52] "GET / HTTP/1.1" 200 -
+2024-10-29 20:22:58,722 - Usu·rio brivaldo, acessou o index.
+2024-10-29 20:22:58,722 - 127.0.0.1 - - [29/Oct/2024 20:22:58] "GET / HTTP/1.1" 200 -
+2024-10-29 20:23:06,424 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.6.141.99:8080
+2024-10-29 20:23:06,424 - [33mPress CTRL+C to quit[0m
+2024-10-29 20:23:06,426 -  * Restarting with stat
+2024-10-29 20:23:07,464 -  * Debugger is active!
+2024-10-29 20:23:07,466 -  * Debugger PIN: 667-367-216
+2024-10-29 20:23:08,042 - Usu·rio brivaldo, acessou o index.
+2024-10-29 20:23:08,042 - 127.0.0.1 - - [29/Oct/2024 20:23:08] "GET / HTTP/1.1" 200 -
+2024-10-29 20:23:11,727 - 127.0.0.1 - - [29/Oct/2024 20:23:11] "[33mGET /admin/ HTTP/1.1[0m" 404 -
+2024-10-29 20:23:25,814 -  * Detected change in 'C:\\Users\\mzmag\\Downloads\\compdistapp\\compdistapp\\app.py', reloading
+2024-10-29 20:23:25,952 -  * Restarting with stat
+2024-10-29 20:23:26,993 -  * Debugger is active!
+2024-10-29 20:23:26,994 -  * Debugger PIN: 667-367-216
+2024-10-29 20:24:15,876 -  * Detected change in 'C:\\Users\\mzmag\\Downloads\\compdistapp\\compdistapp\\app.py', reloading
+2024-10-29 20:24:16,002 -  * Restarting with stat
+2024-10-29 20:24:26,631 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.6.141.99:8080
+2024-10-29 20:24:26,632 - [33mPress CTRL+C to quit[0m
+2024-10-29 20:24:26,634 -  * Restarting with stat
+2024-10-29 20:24:27,601 -  * Debugger is active!
+2024-10-29 20:24:27,602 -  * Debugger PIN: 667-367-216
+2024-10-29 20:24:31,580 - Usu·rio brivaldo, acessou o index.
+2024-10-29 20:24:31,580 - 127.0.0.1 - - [29/Oct/2024 20:24:31] "GET / HTTP/1.1" 200 -
+2024-10-29 20:25:04,281 - 127.0.0.1 - - [29/Oct/2024 20:25:04] "[33mGET /admin/ HTTP/1.1[0m" 404 -
+2024-10-29 20:26:07,401 -  * Detected change in 'C:\\Users\\mzmag\\Downloads\\compdistapp\\compdistapp\\app.py', reloading
+2024-10-29 20:26:07,551 -  * Restarting with stat
+2024-10-29 20:26:12,389 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.6.141.99:8080
+2024-10-29 20:26:12,390 - [33mPress CTRL+C to quit[0m
+2024-10-29 20:26:12,392 -  * Restarting with stat
+2024-10-29 20:26:13,440 -  * Debugger is active!
+2024-10-29 20:26:13,441 -  * Debugger PIN: 667-367-216
+2024-10-29 20:26:26,709 -  * Detected change in 'C:\\Users\\mzmag\\Downloads\\compdistapp\\compdistapp\\app.py', reloading
+2024-10-29 20:26:26,860 -  * Restarting with stat
+2024-10-29 20:26:27,921 -  * Debugger is active!
+2024-10-29 20:26:27,923 -  * Debugger PIN: 667-367-216
+2024-10-29 20:26:47,299 -  * Detected change in 'C:\\Users\\mzmag\\Downloads\\compdistapp\\compdistapp\\app.py', reloading
+2024-10-29 20:26:50,606 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.6.141.99:8080
+2024-10-29 20:26:50,606 - [33mPress CTRL+C to quit[0m
+2024-10-29 20:26:50,608 -  * Restarting with stat
+2024-10-29 20:26:51,652 -  * Debugger is active!
+2024-10-29 20:26:51,654 -  * Debugger PIN: 667-367-216
+2024-10-29 20:26:55,701 - Usu·rio brivaldo, acessou o index.
+2024-10-29 20:26:55,701 - 127.0.0.1 - - [29/Oct/2024 20:26:55] "GET / HTTP/1.1" 200 -
+2024-10-29 20:32:42,778 -  * Detected change in 'C:\\Users\\mzmag\\Downloads\\compdistapp\\compdistapp\\app.py', reloading
+2024-10-29 20:32:42,933 -  * Restarting with stat
