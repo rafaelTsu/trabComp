@@ -1,7 +1,7 @@
 services:
   app:
     container_name: app
-    image: rafatsu/distcomp:1.0.0
+    image: app:1.0
     restart: always
     environment:
       - DB_URL=mysql+pymysql://root:123@db_container:3306/mysql_database
