@@ -3,8 +3,6 @@ services:
     container_name: app
     image: rafatsu/distcomp:1.0.0
     restart: always
-    networks:
-      - app-network
     environment:
       - DB_URL=mysql+pymysql://root:123@database/mysql_database
       - ADMIN_USER=brivaldo
@@ -13,6 +11,7 @@ services:
       - 8080:8080
     depends_on:
       - db
+    
 
   database:
     container_name: db_container
@@ -24,10 +23,4 @@ services:
       - "3306:3306"
     volumes:
       - mysql_data:/var/lib/mysql
-    networks:
-      - app-network
     restart: always
-  
-  networks:
-    app-network:
-      driver: bridge
