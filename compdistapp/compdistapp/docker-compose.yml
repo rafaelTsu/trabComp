@@ -6,11 +6,14 @@ services:
     environment:
       - DB_URL=mysql+pymysql://root:123@database/mysql_database
       - ADMIN_USER=brivaldo
+      - ADMIN_PASSWORD=123
       - SECRET_KEY=d5zmAsUt3bZdZrBjhcpJ7T2ocQgmVXfM
     ports:
       - 8080:8080
     depends_on:
       - database
+    networks:
+      - dbbridge
     
   database:
     container_name: db_container
@@ -23,3 +26,9 @@ services:
     volumes:
       - mysql_data:/var/lib/mysql
     restart: always
+    networks:
+      - dbbridge
+
+networks:
+  dbbridge:
+    driver: bridge
