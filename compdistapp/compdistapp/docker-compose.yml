@@ -4,7 +4,7 @@ services:
     image: rafatsu/distcomp:1.0.0
     restart: always
     networks:
-      - dbbridge
+      - app-network
     environment:
       - DB_URL=mysql+pymysql://root:123@database/mysql_database
       - ADMIN_USER=brivaldo
@@ -14,7 +14,7 @@ services:
     depends_on:
       - db
 
-  db:
+  database:
     container_name: db_container
     image: mysql:8.0
     environment:
@@ -25,8 +25,9 @@ services:
     volumes:
       - mysql_data:/var/lib/mysql
     networks:
-      - dbbridge
+      - app-network
+    restart: always
   
   networks:
-    dbbridge:
+    app-network:
       driver: bridge
