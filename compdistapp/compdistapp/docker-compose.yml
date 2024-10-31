@@ -4,21 +4,27 @@ services:
     image: rafatsu/distcomp:1.0.0
     restart: always
     networks:
-      - backend
+      - dbbridge
     environment:
-      - MYSQL_ROOT_PASSWORD=123
-      - DATABASE_URL=mysql+
-  
+      - DB_URL=mysql+pymysql://root:123@database/mysql_database
+      - ADMIN_USER=brivaldo
+      - SECRET_KEY=d5zmAsUt3bZdZrBjhcpJ7T2ocQgmVXfM
+    ports:
+      - 8080:8080
+    depends_on:
+      - db
 
-  mysql:
+  db:
+    container_name: db_container
     image: mysql:8.0
-    container_name: mysql_container
     environment:
-      MYSQL_ROOT_PASSWORD: root_password
-      MYSQL_DATABASE: compdistapp_db
-      MYSQL_USER: app_user
-      MYSQL_PASSWORD: app_password
+      MYSQL_ROOT_PASSWORD: 123
+      MYSQL_DATABASE: mysql_database
     ports:
       - "3306:3306"
     volumes:
       - mysql_data:/var/lib/mysql
+  
+  networks:
+    dbbridge:
+      driver: bridge
