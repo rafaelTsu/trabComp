@@ -1,3 +1,6 @@
+import time
+time.sleep(20)
+
 import logging
 import os
 from flask import Flask, Response, redirect, jsonify
@@ -68,8 +71,6 @@ def index():
 
 # Initialize the application
 if __name__ == "__main__":
-    import time
-    time.sleep(20)
     with app.app_context():
         db.create_all()
 
