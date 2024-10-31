@@ -42,11 +42,10 @@ def validate_authentication(username, password):
         return False
     return False
 
-def create_admin(){
+def create_admin():
     from models.database import db
     if not Profile.query.filter_by(username=os.getenv("ADMIN_USER")).first():
         admin_user = Profile(username="admin", password=generate_password_hash("123"))
         db.session.add(admin_user)
         db.session.commit()
         log.info("Usuário admin criado com sucesso.")
-}
