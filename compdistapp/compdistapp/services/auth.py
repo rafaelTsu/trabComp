@@ -43,6 +43,7 @@ def validate_authentication(username, password):
     return False
 
 def create_admin():
+    from models.database import db
     """Cria o usuário admin se ele não existir."""
     admin_username = os.getenv("ADMIN_USERNAME", "admin")
     admin_password = os.getenv("ADMIN_PASSWORD", "admin")
