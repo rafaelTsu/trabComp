@@ -22,7 +22,7 @@ class MyModelView(ModelView):
             password = None
 
         if username and password:
-            if validate_authentication(username, password) and username in os.getenv('ADMIN_USER'):
+            if validate_authentication(username, password) and username in os.getenv('ADMIN_USER', "admin"):
                 return True
             else:
                 raise AuthException('Not authenticated.')
