@@ -48,4 +48,4 @@ def create_admin():
         admin_user = Profile(username="admin", password=generate_password_hash("123"))
         db.session.add(admin_user)
         db.session.commit()
-        log.info("Usuário admin criado com sucesso.")
+        print("Usuario admin criado com sucesso")
