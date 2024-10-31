@@ -1,0 +1,24 @@
+services:
+  app:
+    container_name: app
+    image: rafatsu/distcomp:1.0.0
+    restart: always
+    networks:
+      - backend
+    environment:
+      - MYSQL_ROOT_PASSWORD=123
+      - DATABASE_URL=mysql+
+  
+
+  mysql:
+    image: mysql:8.0
+    container_name: mysql_container
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: compdistapp_db
+      MYSQL_USER: app_user
+      MYSQL_PASSWORD: app_password
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql

@@ -1,60 +1,72 @@
-# Importe apenas o necessário e evite importar SQLAlchemy e Admin duas vezes
-from flask import Flask, Response, redirect, jsonify, url_for
+import logging
+import os
+from flask import Flask, Response, redirect, jsonify
 from flask_httpauth import HTTPBasicAuth
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from flask_admin import Admin
+from flask_admin.contrib.sqla import ModelView
 from werkzeug.security import generate_password_hash, check_password_hash
+from werkzeug.exceptions import HTTPException
 
 from models.database import db
-from models.profile_model import Profile 
-from views.profile_view import ProfileView  # Importando a ProfileView já configurada
 
-# Configuração básica da aplicação Flask
+# Application log
+logging.basicConfig(format='%(asctime)s - %(message)s', filename="log/app.log", level=logging.INFO)
+log = logging.getLogger()
+
+# Web Application name
 app = Flask("Comp Dist")
-auth = HTTPBasicAuth()
 
-# Configuração
+# Configuration
 app.config.from_pyfile('cfg/app.cfg', silent=True)
-app.secret_key = app.config.get('SECRET_KEY')
+app.config['FLASK_SECRET'] = os.getenv('SECRET_KEY')
+app.config['BASIC_AUTH_FORCE'] = True
+app.secret_key = os.getenv('SECRET_KEY')
+
+# Set optional bootswatch theme
 app.config['FLASK_ADMIN_SWATCH'] = 'yeti'
-app.config['SQLALCHEMY_DATABASE_URI'] = app.config.get('DATABASE')
+
+# adding configuration for using a database
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DB_URL')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['ADMINISTRATORS'] = ['admin']  # Exemplo, ajuste conforme necessário
 
-# Inicialize o db e a migração
 db.init_app(app)
-migrate = Migrate(app, db)
 
-# Inicialize o Admin com a View personalizada
+from views.profile_view import ProfileView
+from models.profile_model import Profile
+# Admin Interface
 admin = Admin(app, name='Super App', template_mode='bootstrap4')
 admin.add_view(ProfileView(Profile, db.session))
 
-# Função de verificação de senha
-@auth.verify_password
-def verify_password(username, password):
-    user = Profile.query.filter_by(username=username).first()
-    if user and check_password_hash(user.password, password):
-        return username
 
-# Validação de autenticação para o Flask-Admin
-def validate_authentication(username, password):
-    user = Profile.query.filter_by(username=username).first()
-    return user and check_password_hash(user.password, password)
-
-# Rota principal
+from services.auth import auth
+# Routes
 @app.route('/')
 @auth.login_required
 def index():
     user = auth.current_user()
 
-    user_db = Profile.query.filter(Profile.username == user).first()
-    if user_db:
-        message_info = f"Usuário {user}, acessou o index."
-        log.info(message_info)
-        return jsonify({"success": message_info})
+    # Check if the user exist
+    user_db = Profile.query.filter(Profile.username == user)
 
-# Inicializar a aplicação
+    # Avoid error while checking the users in database
+    user_list = False
+    try:
+        user_list = user_db.all()[0]
+    except IndexError:
+        pass
+
+    if user_list:
+        message_info = f"Usuário {user}, acessou o index."
+
+        response = {"success": message_info}
+        log.info(message_info)
+
+        return jsonify(response)
+
+
+# Initialize the application
 if __name__ == "__main__":
     with app.app_context():
         db.create_all()

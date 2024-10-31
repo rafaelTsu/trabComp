@@ -1,26 +1,28 @@
-from flask_admin.contrib.sqla import ModelView
-from flask import redirect
-from werkzeug.exceptions import HTTPException
+import logging
+import os
+from flask import Flask, Response, redirect, jsonify
 from flask_httpauth import HTTPBasicAuth
+from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
+from flask_admin import Admin
+from flask_admin.contrib.sqla import ModelView
+from werkzeug.security import generate_password_hash, check_password_hash
+from werkzeug.exceptions import HTTPException
 
-# Autenticação e app precisam ser importados de app.py ou definidos globalmente
-from app import auth, validate_authentication, app
-
-class AuthException(HTTPException):
-    def __init__(self, message):
-        super().__init__(message, Response(
-            "You could not be authenticated. Please refresh the page.", 401,
-            {'WWW-Authenticate': 'Basic realm="Login Required"'})
-        )
+from services.auth import auth, AuthException, validate_authentication
 
 class MyModelView(ModelView):
     def is_accessible(self):
-        auth_data = auth.get_auth()
-        username = auth_data.get('username') if auth_data else None
-        password = auth_data.get('password') if auth_data else None
+        from app import app
+        if auth.get_auth():
+            username = auth.get_auth()['username']
+            password = auth.get_auth()['password']
+        else:
+            username = None
+            password = None
 
         if username and password:
-            if validate_authentication(username, password) and username in app.config.get('ADMINISTRATORS'):
+            if validate_authentication(username, password) and username in os.getenv('ADMIN_USER'):
                 return True
             else:
                 raise AuthException('Not authenticated.')
