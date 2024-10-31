@@ -43,9 +43,19 @@ def validate_authentication(username, password):
     return False
 
 def create_admin():
-    from models.database import db
-    if not Profile.query.filter_by(username=os.getenv("ADMIN_USER")).first():
-        admin_user = Profile(username="admin", password=generate_password_hash("123"))
+    """Cria o usuário admin se ele não existir."""
+    admin_username = os.getenv("ADMIN_USERNAME", "admin")
+    admin_password = os.getenv("ADMIN_PASSWORD", "admin")
+    
+    # Verifica se o usuário administrador já existe
+    existing_user = Profile.query.filter_by(username=admin_username).first()
+    
+    if not existing_user:
+        # Adiciona o usuário administrador ao banco de dados
+        admin_user = Profile(
+            username=admin_username, 
+            password=generate_password_hash(admin_password)
+        )
         db.session.add(admin_user)
         db.session.commit()
         print("Usuario admin criado com sucesso")
