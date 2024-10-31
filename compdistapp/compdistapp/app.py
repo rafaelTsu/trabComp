@@ -40,7 +40,7 @@ admin = Admin(app, name='Super App', template_mode='bootstrap4')
 admin.add_view(ProfileView(Profile, db.session))
 
 
-from services.auth import auth
+from services.auth import auth, create_admin
 # Routes
 @app.route('/')
 @auth.login_required
@@ -70,5 +70,6 @@ def index():
 if __name__ == "__main__":
     with app.app_context():
         db.create_all()
+        create_admin()
 
     app.run(host="0.0.0.0", debug=True, port=8080)

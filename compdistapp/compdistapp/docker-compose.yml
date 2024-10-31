@@ -12,7 +12,6 @@ services:
     depends_on:
       - database
     
-
   database:
     container_name: db_container
     image: mysql:8.0

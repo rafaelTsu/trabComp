@@ -1,4 +1,5 @@
 import logging
+import os
 from flask import Flask, Response, redirect, jsonify
 from flask_httpauth import HTTPBasicAuth
 from flask_sqlalchemy import SQLAlchemy
@@ -40,3 +41,14 @@ def validate_authentication(username, password):
             return True
         return False
     return False
+
+def create_admin(){
+    from models.database import db
+    admin_user = os.getenv("ADMIN_USER")
+    admin_password = os.getenv("ADMIN_PASSWORD")
+    if not Profile.query.filter_by(username=admin_user).first():
+        admin_user = Profile(username=admin_user, password=generate_password_hash(admin_password))
+        db.session.add(admin_user)
+        db.session.commit()
+        log.info("Usuário admin criado com sucesso.")
+}
