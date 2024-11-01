@@ -23,15 +23,15 @@ app = Flask("Comp Dist")
 
 # Configuration
 app.config.from_pyfile('cfg/app.cfg', silent=True)
-app.config['FLASK_SECRET'] = os.environ('SECRET_KEY')
+app.config['FLASK_SECRET'] = os.getenv('SECRET_KEY')
 app.config['BASIC_AUTH_FORCE'] = True
-app.secret_key = os.environ('SECRET_KEY')
+app.secret_key = os.getenv('SECRET_KEY')
 
 # Set optional bootswatch theme
 app.config['FLASK_ADMIN_SWATCH'] = 'yeti'
 
 # adding configuration for using a database
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ('DB_URL')
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DB_URL')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db.init_app(app)
