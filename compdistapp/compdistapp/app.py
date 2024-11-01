@@ -1,5 +1,5 @@
 import time
-time.sleep(20)
+time.sleep(25)
 
 import logging
 import os
@@ -73,5 +73,7 @@ def index():
 if __name__ == "__main__":
     with app.app_context():
         db.create_all()
+        time.sleep(5)
+        Profile.insert_admin()
 
     app.run(host="0.0.0.0", debug=True, port=8080)
